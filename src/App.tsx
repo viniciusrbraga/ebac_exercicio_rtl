@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Cabec from './components/Cabecalho'
+import Hero from './components/Hero'
+import ListaVagas from './containers/ListaVagas'
+
+import './global'
+import { Container } from './global'
+import EstiloGlobal from './global'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <EstiloGlobal />
+      <Cabec />
+      <Hero />
+      <Container>
+        <ListaVagas />
+      </Container>
+    </>
+  )
 }
 
-export default App;
+export default App
